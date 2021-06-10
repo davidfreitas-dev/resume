@@ -197,6 +197,39 @@ section {
 	color: var(--green);
 }
 
+.portfolio-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2.5rem;
+	position: relative;
+	margin-bottom: 3rem;
+}
+
+.portfolio {
+	background: var(--bg-accent);
+	padding: 1.5rem;
+	text-align: center;
+	position: relative;
+	z-index: 50;
+}
+
+.portfolio h3 {
+	color: #fff;
+	margin-bottom: .5rem;
+	font-weight: 600;
+}
+
+.portfolio small {
+	color: var(--font);
+}
+
+.portfolio div {
+	height: 200px;
+	margin-top: 1.3rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .skills-wrapper {
 	width: 100%;
 	max-width: 800px;
@@ -232,6 +265,23 @@ section {
 	background: var(--bg); !important;
 }
 
+.brands {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	place-items: center;
+	margin-bottom: 3rem;
+}
+
+.brands span {
+	color: var(--font);
+	display: inline-block;
+	font-size: 4rem;
+}
+
+.brands span:last-child {
+	margin-right: 0rem;
+}
+
 .bg-wrap {
 	height: 100px;
 	width: 100px;
@@ -250,45 +300,12 @@ section {
 	right: -10px;
 }
 
-.portfolio-wrapper {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 2.5rem;
-	position: relative;
-	margin-bottom: 2rem;
-}
-
-.portfolio {
-	background: var(--bg-accent);
-	padding: 1.5rem;
-	text-align: center;
-	position: relative;
-	z-index: 50;
-}
-
-.portfolio h3 {
-	color: #fff;
-	margin-bottom: .5rem;
-	font-weight: 600;
-}
-
-.portfolio small {
-	color: var(--font);
-}
-
-.portfolio div {
-	height: 200px;
-	margin-top: 1.3rem;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
 .services-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 2.5rem;
 	position: relative;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 }
 
 .service {
@@ -316,23 +333,6 @@ section {
 	color: var(--font);
 	font-size: .85rem;
 	line-height: 1.8rem;
-}
-
-.brands {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	place-items: center;
-	margin-bottom: 2rem;
-}
-
-.brands span {
-	color: var(--font);
-	display: inline-block;
-	font-size: 4rem;
-}
-
-.brands span:last-child {
-	margin-right: 0rem;
 }
 
 .contact-grid {
