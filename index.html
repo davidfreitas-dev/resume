@@ -19,20 +19,20 @@
 <body>
 
 	<div class="wrapper">		
-		<header>
+		<header id="top">
 			<input type="checkbox" id="menu-toggle" />
 
 			<h3>Dave<small> dev</small></h3>
 
 			<div class="main-menu">
-				<ul>
-					<li><a href="">Início</a></li>
-					<li><a href="">Sobre Mim</a></li>
-					<li><a href="">Portifolio</a></li>
-					<li><a href="">Serviços</a></li>
-					<li><a href="">Blog</a></li>
+				<ul class="nav">
+					<li><a href="#top">Início</a></li>
+					<li><a href="#presentation">Sobre Mim</a></li>
+					<li><a href="#portfolio">Portifolio</a></li>
+					<li><a href="#services">Serviços</a></li>
+					<li><a href="#">Blog</a></li>
 					<li>
-						<a href="">
+						<a href="#contact">
 							<span class="las la-sms"></span>
 							Contato
 						</a>
@@ -60,7 +60,7 @@
 	</div>
 
 	<div class="wrapper">
-		<section>
+		<section id="presentation">
 			<div class="section-title">
 				<h1>Apresentação</h1>
 				<small>Deixe-me contar um pouco da minha história e o caminho que trilhei até o nível em que me encontro hoje.</small>
@@ -126,7 +126,7 @@
 							<div class="timeline-marker"></div>
 							<div class="timeline-content">
 								<h3 class="timeline-title">Implementação de E-commerce Kinature Cosméticos</h3>
-								<p>Fui contratado pela empresa Kinature Cosméticos, que é um distribuidor de produtos naturais no bairro Brás em São Paulo. Atuando como Full Stack, desenvolvi uma loja virtual para comercialização dos produtos da loja através da internet, com todas as funcionalidades características de um e-commerce atual.</p>
+								<p>Fui contratado pela empresa Kinature Cosméticos, que é um distribuidor de produtos naturais no bairro Brás em São Paulo. Atuando como Full Stack, desenvolvi uma loja virtual para comercialização dos produtos da loja através da internet, com todas as funcionalidades características de um e-commerce atual. Tecnologias utilizadas: HTML5, CSS3, Javascript, Jquery, Ajax e Bootstrap 5 no front-end e PHP 7 e MySql no back-end.</p>
 							</div>
 						</li>
 					</ul>
@@ -136,7 +136,7 @@
 	</div>
 
 	<div class="wrapper">
-		<section>
+		<section id="portfolio">
 			<div class="section-title">
 				<h1>Meu Portfolio</h1>
 				<small>Estes são alguns projetos e soluções criados por mim, sempre buscando atender a um padrão de desenvolvimento e o uso de tecnologias atuais</small>
@@ -170,7 +170,7 @@
 	</div>
 
 	<div class="wrapper">
-		<section>
+		<section id="skills">
 			<div class="section-title">
 				<h1>Minhas Habilidades</h1>
 				<small>Eu enxergo cada projeto como sendo meu próprio projeto pessoal. Isto me faz ter um engajamento maior com o projeto do cliente aumentando o comprometimento e motivação.</small>
@@ -214,7 +214,7 @@
 	</div>
 
 	<div class="wrapper">
-		<section>
+		<section id="services">
 			<div class="section-title">
 				<h1>Serviços</h1>
 				<small>Focando no resultado, busco sempre levar o negócio do cliente à um nível superior.</small>
@@ -263,7 +263,7 @@
 	</div>
 
 	<div class="wrapper">
-		<section>
+		<section id="contact">
 			<div class="contact-grid">
 				<div class="form-wrapper">
 					<div class="form-title">
@@ -294,6 +294,8 @@
 			</div>
 		</section>
 	</div>
+
+	<a href="#top" class="top"><span class="las la-chevron-up"></span></a>
 	
 	<footer>
 		<div class="wrapper">
@@ -393,6 +395,18 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#hero").addClass("scale-bounce");
+		});
+	</script>
+
+	<script type="text/javascript">
+		$('.nav a[href^="#"]').on('click', function(e) {
+			e.preventDefault();
+			var id = $(this).attr('href'),
+			targetOffset = $(id).offset().top;
+			
+			$('html, body').animate({ 
+				scrollTop: targetOffset - 0
+			}, 500);
 		});
 	</script>
 </body>
