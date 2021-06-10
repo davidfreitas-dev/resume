@@ -196,18 +196,19 @@ section {
 
 .skill {
 	display: grid;
-	justify-content: center;
+	place-items: center;
 }
 
 .skill p {
 	color: var(--font);
 	clear: both;
-	padding-left: 1.3rem;
-	padding-top: .5rem;
+	margin: 0;
 }
 
 .percircle {
 	background: var(--bg-accent) !important;
+	margin: 0;
+	margin-bottom: 2rem;
 }
 
 .percircle span:first-child {
