@@ -142,13 +142,25 @@ header label {
 	font-size: 1.1rem;
 }
 
+.hero-img {
+	background: var(--bg-accent);
+	content: "";
+	height: 250px;
+	width: 250px;
+	border-radius: 100%;	
+	position: absolute;	
+	right: 0;
+	margin-right: 7rem;
+}
+
 img {
+	height: 250px;
+	width: 250px;
+	border-radius: 100%;
 	position: absolute;
 	top: 0rem;
 	bottom: 0rem;
 	right: 0;
-	height: 80vh;
-	margin-right: 3rem;
 }
 
 section {
@@ -525,6 +537,10 @@ footer {
 
 	#hero {
 		margin: 0;
+	}
+
+	.hero-img {
+		display: none;
 	}
 
 	.portfolio-wrapper {
