@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-	--green: #01c38d;
+	--primary: #01c38d;
 	--red: #9b1427;
 	--bg: #030302;
 	--bg-accent: #191919;
@@ -33,7 +33,7 @@ body {
 }
 
 .btn-top {
-	background-color: var(--green);
+	background-color: var(--primary);
 	position: fixed;
 	right: 20px;
 	height: 40px;
@@ -67,7 +67,7 @@ header h3 {
 }
 
 header h3 small {
-	color: var(--green);
+	color: var(--primary);
 	font-size: .8rem;
 }
 
@@ -89,20 +89,22 @@ header li a {
 }
 
 header li:last-child a {
-	border: 3px solid var(--green);
-	color: var(--green);
-	text-transform: uppercase;
+	border: 3px solid var(--primary);
+	background: var(--primary);
+	color: var(--font);
+	font-weight: bold;
 	padding: .25rem 1rem;
 }
 
 header li:last-child a span {
+	font-size: 1rem;
 	margin-right: .4rem;
 }
 
 header label {
 	font-size: 1.4rem;
-	color: var(--green);
-	border: 2px solid var(--green);
+	color: var(--primary);
+	border: 2px solid var(--primary);
 	height: 40px;
 	width: 40px;
 	display: grid;
@@ -131,7 +133,7 @@ header label {
 }
 
 .hero h1 {
-	color: var(--green);
+	color: var(--primary);
 	font-weight: 800;
 	font-size: 3.5rem;
 	line-height: 5.5rem;
@@ -140,7 +142,7 @@ header label {
 
 .hero a {
 	display: inline-block;
-	border: 3px solid var(--green);
+	border: 3px solid var(--primary);
 	padding: .45rem 1rem;
 	font-size: .85rem;
 	text-transform: uppercase;
@@ -193,7 +195,7 @@ section {
 
 .vid-wrapper div span {
 	font-size: 10rem;
-	color: var(--green);
+	color: var(--primary);
 }
 
 .portfolio-wrapper {
@@ -201,7 +203,7 @@ section {
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 2.5rem;
 	position: relative;
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
 }
 
 .portfolio {
@@ -232,10 +234,10 @@ section {
 .skills-wrapper {
 	width: 100%;
 	max-width: 800px;
-	margin: auto;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	justify-content: center;
+	margin: auto;
 	margin-bottom: 2rem;
 }
 
@@ -284,7 +286,7 @@ section {
 .bg-wrap {
 	height: 100px;
 	width: 100px;
-	background: var(--green);
+	background: var(--primary);
 	position: absolute;
 	z-index: 10;
 }
@@ -323,7 +325,7 @@ section {
 
 .service span {
 	font-size: 3.5rem;
-	color: var(--green);
+	color: var(--primary);
 	display: inline-block;
 	margin: 1rem 0rem;
 }
@@ -338,6 +340,7 @@ section {
 	display: grid;
 	place-items: center;
 	margin-top: 5rem;
+	margin-bottom: 5rem;
 }
 
 .form {
@@ -351,7 +354,7 @@ section {
 
 .form-title h2 span {
 	padding-top: 1rem;
-	border-top: 5px solid var(--green);
+	border-top: 5px solid var(--primary);
 }
 
 .form-title small {
@@ -374,8 +377,8 @@ section {
 .form-group button {
 	padding: .5rem 2.5rem;
 	color: var(--font);
-	background: var(--green);
-	border: 1px solid var(--green);
+	background: var(--primary);
+	border: 1px solid var(--primary);
 	font-weight: 700;
 }
 
@@ -408,7 +411,7 @@ footer {
 
 .about h3 {
 	font-size: 2.4rem;
-	color: var(--green);
+	color: var(--primary);
 	font-weight: 600;
 }
 
@@ -425,7 +428,7 @@ footer {
 
 .socials span {
 	font-size: 1.7rem;
-	color: var(--green);
+	color: var(--primary);
 }
 
 .links h3 {
@@ -444,14 +447,14 @@ footer {
 }
 
 .links li span {
-	color: var(--green);
+	color: var(--primary);
 	font-size: 1.3rem;
 }
 
 .links button {
-	border: 3px solid var(--green);
+	border: 3px solid var(--primary);
 	background: transparent;
-	color: var(--green);
+	color: var(--primary);
 	padding: .5rem 1rem;
 }
 
