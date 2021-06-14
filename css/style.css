@@ -355,7 +355,7 @@ section {
 }
 
 .form-title small {
-	color: var(--font);
+	color: #888;
 }
 
 .form-group {
