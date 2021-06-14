@@ -112,14 +112,22 @@ header label {
 }
 
 .hero {
-	min-height: 80vh;
-	position: relative;
-	display: flex;
-	align-items: center;
+	min-height: 85vh;
+	display: grid;
+	justify-content: center;
+	text-align: center;
 }
 
-#hero {
-	margin-left: 5rem;
+.hero-img {
+	margin: auto;
+}
+
+.hero img {
+	background: var(--bg-accent);
+	height: 250px;
+	width: 250px;
+	border-radius: 100%;
+	margin: auto;
 }
 
 .hero h1 {
@@ -140,27 +148,6 @@ header label {
 
 .hero a span {
 	font-size: 1.1rem;
-}
-
-.hero-img {
-	background: var(--bg-accent);
-	content: "";
-	height: 250px;
-	width: 250px;
-	border-radius: 100%;	
-	position: absolute;	
-	right: 0;
-	margin-right: 7rem;
-}
-
-img {
-	height: 250px;
-	width: 250px;
-	border-radius: 100%;
-	position: absolute;
-	top: 0rem;
-	bottom: 0rem;
-	right: 0;
 }
 
 section {
@@ -526,21 +513,21 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-	.hero img {
-		display: none;
-	}
-
 	.hero {
 		justify-content: center;
 		text-align: center;
 	}
 
+	.hero img {
+		background: var(--bg-accent);
+		height: 200px;
+		width: 200px;
+		border-radius: 100%;
+		margin: auto;
+	}	
+
 	#hero {
 		margin: 0;
-	}
-
-	.hero-img {
-		display: none;
 	}
 
 	.portfolio-wrapper {
