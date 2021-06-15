@@ -372,6 +372,7 @@ section {
 	background: transparent;
 	width: 100%;
 	padding: .5rem 1rem;
+	color: var(--font);
 }
 
 .form-group button {
