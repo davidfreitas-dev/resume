@@ -390,11 +390,11 @@ textarea {
 	padding: .5rem 1rem;
 }
 
-.contact-img {
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 500px;
-	border-radius: 3px;
+.alert {
+	font-size: .8rem;
+	padding: .5rem 1rem;
+	color: var(--font);
+	display: none;
 }
 
 footer {

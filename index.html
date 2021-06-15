@@ -280,19 +280,20 @@
 						<div class="form">
 							<form id="form-contact" action="">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Nome e Sobrenome">
+									<input type="text" id="name" name="name" class="form-control" placeholder="Nome e Sobrenome">
 								</div>
 
 								<div class="form-group">
-									<input type="email" class="form-control" placeholder="E-mail">
+									<input type="email" id="email" name="email" class="form-control" placeholder="E-mail">
 								</div>
 
 								<div class="form-group">
-									<textarea name="" id="" cols="30" rows="5" placeholder="Escreva sua mensagem aqui"></textarea>
+									<textarea name="" id="message" name="message" cols="30" rows="5" placeholder="Escreva sua mensagem aqui"></textarea>
 								</div>
 
 								<div class="form-group">
-									<button type="button">Enviar</button>
+									<button type="button" id="btn-send">Enviar</button>
+									<span class="alert" id="alert">Alerta</span>
 								</div>
 							</form>
 						</div>
@@ -304,8 +305,7 @@
 	
 	<div class="nav">
 		<a href="#top" class="btn-top"><span class="las la-chevron-up"></span></a>
-	</div>
-	
+	</div>	
 	
 	<footer>
 		<div class="wrapper">
