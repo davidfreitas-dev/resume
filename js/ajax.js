@@ -20,7 +20,7 @@ $('document').ready(function(){
 					$("#alert").css('display', 'block');
 					$("#message").html('<strong>Erro! </strong>' + response.mensagem);
 				}
-		    }
+			}
 		});
 	});
 });

@@ -402,6 +402,7 @@ footer {
 	background: var(--bg-accent);
 	color: #fff;
 	padding: 3.7rem 0rem;
+	margin-top: 5rem;
 }
 
 .footer-grid {
