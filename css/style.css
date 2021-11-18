@@ -89,7 +89,7 @@ header li a {
 }
 
 header li:last-child a {
-	border: 3px solid var(--primary);
+	border: 2px solid var(--primary);
 	background: transparent;
 	border-radius: 50px;
 	color: var(--font);
@@ -102,7 +102,7 @@ header li:last-child a span {
 	margin-right: .4rem;
 }
 
-header li a:hover {
+.active a:hover {
 	background: var(--primary);
 	transition: 300ms;
 }
@@ -261,20 +261,6 @@ section {
 	color: var(--font);
 	clear: both;
 	margin: 0;
-}
-
-.percircle {
-	background: var(--bg-accent) !important;
-	margin: 0;
-	margin-bottom: 2rem;
-}
-
-.percircle span:first-child {
-	font-weight: 700 !important;
-}
-
-.percircle:after {
-	background: var(--bg); !important;
 }
 
 .brands {
@@ -441,7 +427,7 @@ footer {
 }
 
 .socials {
-	display: : flex;
+	display: flex;
 	justify-content: space-between;
 }
 
