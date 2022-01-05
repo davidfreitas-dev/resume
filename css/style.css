@@ -32,33 +32,12 @@ body {
 	position: relative;
 }
 
-.btn-scroll-top {
-	background-color: var(--primary);
-	position: fixed;
-	right: 20px;
-	height: 40px;
-	width: 40px;
-	border-radius: 100%;	
-	bottom: 30px;
-	display: grid;
-	place-items: center;
-	z-index: 50;
+main {
+	margin-top: 70px;
 }
 
 #menu-toggle {
 	display: none;
-}
-
-.wrapper {
-	width: 75%;
-	margin: auto;
-}
-
-header {
-	display: flex;
-	justify-content: space-between;
-	height: 70px;
-	align-items: center;
 }
 
 header h3 {
@@ -71,52 +50,62 @@ header h3 small {
 	font-size: .8rem;
 }
 
-header ul {
-	display: flex;
-	align-items: center;
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 30;
+    background-color: var(--bg);
 }
 
-header li {
-	margin-left: 1.6rem;
+.header__logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
 }
 
-header li:first-child {
-	margin-left: 0rem;
+.menu__toggle {
+    display: none;
 }
 
-header li a {
-	font-size: .85rem;
+.nav__list {
+    display: flex;
+    gap: .5rem;
 }
 
-header li:last-child a {
+.nav__link {
+    display: block;
+    font-size: .85rem;
+    padding: .5rem;
+    color: #fff;
+}
+
+.active__item {
+    color: var(--font);
+    font-weight: bold;
+    padding: 0.25rem 1rem;
 	border: 2px solid var(--primary);
-	background: transparent;
-	border-radius: 50px;
-	color: var(--font);
-	font-weight: bold;
-	padding: .25rem 1rem;
+    background: transparent;
+    border-radius: 50px;
+	margin-top: 2px;
 }
 
-header li:last-child a span {
-	font-size: 1rem;
-	margin-right: .4rem;
-}
-
-.active a:hover {
+.active__item:hover {
 	background: var(--primary);
 	transition: 300ms;
 }
 
-header label {
-	font-size: 1.4rem;
-	color: var(--primary);
-	border: 2px solid var(--primary);
-	height: 40px;
-	width: 40px;
-	display: grid;
-	place-items: center;
-	border-radius: 3px;
-	display: none;
+.social__media {
+    display: none;
+}
+
+.wrapper {
+	width: 75%;
+	margin: auto;
 }
 
 .hero {
@@ -317,7 +306,7 @@ section {
 	padding: 1.5rem;
 	text-align: center;
 	position: relative;
-	z-index: 50;
+	z-index: 10;
 }
 
 .service h3 {
@@ -399,6 +388,19 @@ textarea {
 	padding: .5rem 1rem;
 	color: var(--font);
 	display: none;
+}
+
+.btn-scroll-top {
+	background-color: var(--primary);
+	position: fixed;
+	right: 20px;
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;	
+	bottom: 30px;
+	display: grid;
+	place-items: center;
+	z-index: 20;
 }
 
 footer {
@@ -490,23 +492,77 @@ footer {
 		margin: 0;
 	}
 	
-	header label {
-		display: grid;
-	}
+	.header {
+        justify-content: space-between;
+        padding: 1rem;
+    }
 
-	header ul {
-		display: block;
-		width: 90%;
-		margin: auto;
-	}
+    .header__logo {
+        margin-left: 1rem;
+    }
 
-	header li {
-		margin: 0;
-		margin-bottom: .8rem;
-	}
+    .menu__toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		width: 35px;
+		height: 35px;
+		font-size: 1.5rem;
+        color: var(--primary);
+		border: 2px solid var(--primary);
+		border-radius: 5px;
+        cursor: pointer;
+    }
 
-	header li:last-child {
-		margin-top: 1rem;
+    .nav__list {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        margin-right: 0;
+        width: 100%;
+        height: 0;
+        transition: .3s;
+        z-index: 100;
+        visibility: hidden;
+        overflow-y: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .active .nav__list {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+        background-color: var(--bg);
+    }
+
+    .nav__item {
+        padding: .5rem 0;
+    }
+
+    .nav__link {
+        font-size: 1.1rem;
+        padding: .5rem 1.5rem;
+    }
+
+    .social__media {
+        display: block;
+        margin-top: 3rem;
+    }
+
+    .social__link {
+        font-size: 1.8rem;
+        padding: 1rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+	.social__link :hover {
+		color: var(--primary);
+		transition: 300ms;
 	}
 
 	.hero {
@@ -524,21 +580,6 @@ footer {
 
 	#hero {
 		margin: 0;
-	}
-
-	#menu-toggle:checked ~ .main-menu {
-		top: 70px;
-	}
-
-	.main-menu {
-		position: absolute;
-		top: -100%;
-		background: var(--bg-accent);
-		left: 0;
-		right: 0;
-		z-index: 100;
-		padding: 1.5rem 0rem;
-		transition-duration: 300ms;
 	}
 
 	.portfolio-wrapper {
@@ -591,6 +632,10 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
+	.header__logo {
+        margin-left: .25rem;
+    }
+
 	.portfolio-wrapper {
 		grid-template-columns: repeat(1, 1fr);
 		width: 100%;
