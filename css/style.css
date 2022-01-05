@@ -4,13 +4,15 @@
 	--primary: #01c38d;
 	--bg: #030302;
 	--bg-accent: #191919;
+	--shadow: transparent;
 	--font: #efefef;
 }
 
 .light:root {
 	--primary: #01c38d;
 	--bg: #fff;
-	--bg-accent: #fbfbfb;
+	--bg-accent: #f1f1f1;
+	--shadow: #6c6c6c;
 	--font: #3c3c3c;
 }
 
@@ -89,6 +91,17 @@ header h3 small {
     font-size: .85rem;
     padding: .5rem;
     color: var(--font);
+}
+
+.btn__theme{
+    color: var(--font);
+	font-size: 1.5rem;
+	padding-left: 1.5rem;
+}
+
+.btn__theme :hover {
+	color: var(--primary);
+	transition: 300ms;
 }
 
 .active__item {
@@ -210,7 +223,7 @@ section {
 
 .portfolio {
 	background: var(--bg-accent);
-	padding: 1rem;
+	padding: 1.5rem;
 	text-align: center;
 	position: relative;
 }
@@ -219,6 +232,7 @@ section {
 	margin-top: -.5rem;
 	margin-bottom: .5rem;	
 	transition: 300ms;
+	box-shadow: 3px 3px 7px 0px var(--shadow);
 }
 
 .portfolio h3 {
@@ -450,6 +464,10 @@ footer {
 	color: var(--primary);
 }
 
+.links {
+	margin: 0 auto;
+}
+
 .links h3 {
 	font-size: 1.1rem;
 	color: var(--font);
@@ -488,7 +506,7 @@ footer {
 
 .copyright {
 	padding: 1rem;
-	text-align: right;
+	text-align: center;
 	color: var(--font);
 	font-size: .85rem;
 }
@@ -543,6 +561,10 @@ footer {
         justify-content: flex-start;
         align-items: center;
     }
+
+	.la-moon {		
+		color: var(--font);
+	}
 
     .active .nav__list {
         height: calc(100vh - 70px);

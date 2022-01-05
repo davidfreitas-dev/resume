@@ -38,3 +38,25 @@ menuLink.addEventListener('click', toggleMenu)
 menuToggle.addEventListener('click', toggleMenu)
 
 menuToggle.addEventListener('touchstart', toggleMenu)
+
+/** 
+ * Theme Toggle
+ */
+const btnTheme = document.querySelector('.btn__theme')
+
+function toggleTheme(e) {
+    const btnIcon = document.querySelector('.btn__theme i')
+    const themeIcon = btnIcon.classList.item(1)
+
+    if (themeIcon === 'la-moon') {
+        btnIcon.classList.remove('la-moon')
+        btnIcon.classList.add('la-sun')
+    } else {
+        btnIcon.classList.remove('la-sun')
+        btnIcon.classList.add('la-moon')
+    }
+
+    return document.documentElement.classList.toggle('light')
+}
+
+btnTheme.addEventListener('click', toggleTheme)

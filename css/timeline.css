@@ -1,3 +1,11 @@
+:root {
+  --font: #efefef;
+}
+
+.light:root {
+  --font: #191919;
+}
+
 /*===============
     TIMELINE
 ================*/
@@ -29,6 +37,7 @@
 
 /*----- TIMELINE INFO -----*/
 .timeline-info {
+  color: var(--font);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -117,6 +126,7 @@
 }
 .period .timeline-title {
   margin: 0;
+  color: var(--font);
 }
 
 /*----------------------------------------------
