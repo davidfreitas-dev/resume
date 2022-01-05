@@ -2,10 +2,16 @@
 
 :root {
 	--primary: #01c38d;
-	--red: #9b1427;
 	--bg: #030302;
 	--bg-accent: #191919;
 	--font: #efefef;
+}
+
+.light:root {
+	--primary: #01c38d;
+	--bg: #fff;
+	--bg-accent: #fbfbfb;
+	--font: #3c3c3c;
 }
 
 * {
@@ -42,7 +48,7 @@ main {
 
 header h3 {
 	font-size: 1.5rem;
-	color: #fff;
+	color: var(--font);
 }
 
 header h3 small {
@@ -60,6 +66,7 @@ header h3 small {
     top: 0;
     z-index: 30;
     background-color: var(--bg);
+	box-shadow: 0px -5px 5px 3px #3c3c3c;
 }
 
 .header__logo {
@@ -81,7 +88,7 @@ header h3 small {
     display: block;
     font-size: .85rem;
     padding: .5rem;
-    color: #fff;
+    color: var(--font);
 }
 
 .active__item {
@@ -95,6 +102,7 @@ header h3 small {
 }
 
 .active__item:hover {
+	color: #fff;
 	background: var(--primary);
 	transition: 300ms;
 }
@@ -214,7 +222,7 @@ section {
 }
 
 .portfolio h3 {
-	color: #fff;
+	color: var(--font);
 	margin-bottom: .5rem;
 	font-weight: 600;
 }
@@ -310,7 +318,7 @@ section {
 }
 
 .service h3 {
-	color: #fff;
+	color: var(--font);
 	font-weight: 500;
 	margin-bottom: .5rem;
 }
@@ -391,6 +399,7 @@ textarea {
 }
 
 .btn-scroll-top {
+	color: var(--bg);
 	background-color: var(--primary);
 	position: fixed;
 	right: 20px;
@@ -424,8 +433,9 @@ footer {
 
 .about small {
 	display: inline-block;
-	margin: 1rem 0rem;
+	color: var(--font);
 	line-height: 1.5rem;
+	margin: 1rem 0rem;
 }
 
 .socials {
@@ -442,6 +452,7 @@ footer {
 
 .links h3 {
 	font-size: 1.1rem;
+	color: var(--font);
 	font-weight: 600;
 	margin-bottom: .5rem;
 }
@@ -451,8 +462,9 @@ footer {
 }
 
 .links li {
-	margin-bottom: .5rem;
+	color: var(--font);
 	font-size: .85rem;
+	margin-bottom: .5rem;
 }
 
 .links li span {
@@ -555,8 +567,8 @@ footer {
 
     .social__link {
         font-size: 1.8rem;
+		color: var(--font);
         padding: 1rem;
-        color: #fff;
         cursor: pointer;
     }
 
