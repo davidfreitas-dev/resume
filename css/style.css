@@ -2,18 +2,18 @@
 
 :root {
 	--primary: #01c38d;
+	--bg: #fff;
+	--bg-accent: #f1f1f1;
+	--shadow: #6c6c6c;
+	--font: #3c3c3c;	
+}
+
+.dark:root {
+	--primary: #01c38d;
 	--bg: #030302;
 	--bg-accent: #191919;
 	--shadow: transparent;
 	--font: #efefef;
-}
-
-.light:root {
-	--primary: #01c38d;
-	--bg: #fff;
-	--bg-accent: #f1f1f1;
-	--shadow: #6c6c6c;
-	--font: #3c3c3c;
 }
 
 * {
@@ -96,7 +96,7 @@ header h3 small {
 .btn__theme{
     color: var(--font);
 	font-size: 1.5rem;
-	padding-left: 1.5rem;
+	padding: 0 1.5rem;
 }
 
 .btn__theme :hover {
@@ -491,10 +491,11 @@ footer {
 }
 
 .links button {
-	border: 3px solid var(--primary);
-	background: transparent;
-	color: var(--primary);
+	font-size: .85rem;
 	padding: .5rem 1rem;
+	color: var(--primary);
+	background: transparent;
+	border: 3px solid var(--primary);
 	border-radius: 50px;
 }
 

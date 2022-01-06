@@ -56,7 +56,7 @@ function toggleTheme(e) {
         btnIcon.classList.add('la-moon')
     }
 
-    return document.documentElement.classList.toggle('light')
+    return document.documentElement.classList.toggle('dark')
 }
 
 btnTheme.addEventListener('click', toggleTheme)

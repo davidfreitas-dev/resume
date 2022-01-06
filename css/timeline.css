@@ -1,9 +1,9 @@
 :root {
-  --font: #efefef;
+  --font: #191919;
 }
 
-.light:root {
-  --font: #191919;
+.dark:root {
+  --font: #efefef;
 }
 
 /*===============
