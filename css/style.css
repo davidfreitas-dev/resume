@@ -25,6 +25,12 @@
 	list-style-type: none;
 }
 
+body {
+	color: var(--font);
+	background: var(--bg);
+	position: relative;
+}
+
 a {
 	color: var(--font);
 }
@@ -32,12 +38,6 @@ a {
 p {
 	font-size: .8rem;
 	color: #888;
-}
-
-body {
-	color: var(--font);
-	background: var(--bg);
-	position: relative;
 }
 
 main {
@@ -485,24 +485,35 @@ footer {
 	margin-bottom: .5rem;
 }
 
+.links li a {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
 .links li span {
 	color: var(--primary);
 	font-size: 1.3rem;
+	margin-right: .25rem;
 }
 
-.links button {
+.links .btn {
 	font-size: .85rem;
 	padding: .5rem 1rem;
 	color: var(--primary);
 	background: transparent;
-	border: 3px solid var(--primary);
+	border: 2px solid var(--primary);
 	border-radius: 50px;
 }
 
-.links button:hover {
+.links .btn:hover {
 	background: var(--primary);
 	color: #fff;
 	transition: 300ms;
+}
+
+.links .btn span {
+	font-size: 1.1rem;
 }
 
 .copyright {
@@ -572,6 +583,7 @@ footer {
         visibility: visible;
         overflow-y: auto;
         background-color: var(--bg);
+		transition: .3s;
     }
 
     .nav__item {
@@ -603,6 +615,7 @@ footer {
 	.hero {
 		justify-content: center;
 		text-align: center;
+		padding-top: 1rem;
 	}
 
 	.hero img {
@@ -659,6 +672,10 @@ footer {
 
 	.socials {
 		margin: auto;
+	}
+
+	.links li a {
+		justify-content: center;
 	}
 
 	.copyright {
