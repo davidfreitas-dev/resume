@@ -35,7 +35,7 @@ p {
 }
 
 body {
-	color: #fff;
+	color: var(--font);
 	background: var(--bg);
 	position: relative;
 }
@@ -575,7 +575,7 @@ footer {
     }
 
     .nav__item {
-        padding: .5rem 0;
+        padding: .3rem 0;
     }
 
     .nav__link {
@@ -585,7 +585,7 @@ footer {
 
     .social__media {
         display: block;
-        margin-top: 3rem;
+        margin-top: 1rem;
     }
 
     .social__link {

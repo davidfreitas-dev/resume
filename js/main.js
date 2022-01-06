@@ -48,12 +48,12 @@ function toggleTheme(e) {
     const btnIcon = document.querySelector('.btn__theme i')
     const themeIcon = btnIcon.classList.item(1)
 
-    if (themeIcon === 'la-moon') {
-        btnIcon.classList.remove('la-moon')
-        btnIcon.classList.add('la-sun')
-    } else {
+    if (themeIcon === 'la-sun') {
         btnIcon.classList.remove('la-sun')
         btnIcon.classList.add('la-moon')
+    } else {
+        btnIcon.classList.remove('la-moon')
+        btnIcon.classList.add('la-sun')
     }
 
     return document.documentElement.classList.toggle('dark')
