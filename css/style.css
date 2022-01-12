@@ -589,7 +589,7 @@ footer {
         visibility: visible;
         overflow-y: auto;
         background-color: var(--bg);
-		transition: .3s;
+		transition: .2s linear;
     }
 
     .nav__item {
