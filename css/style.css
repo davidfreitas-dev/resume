@@ -223,14 +223,14 @@ section {
 
 .portfolio-wrapper {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 2rem;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1rem;
 	margin-bottom: 5rem;
 }
 
 .portfolio {
 	transition: 0.2s linear;
-	padding: 1.5rem;
+	padding: 1rem;
 	text-align: center;
 	position: relative;
 	background: var(--bg-accent);
@@ -238,24 +238,27 @@ section {
 }
 
 .portfolio:hover {
-	margin-top: -.25rem;
-	margin-bottom: .25rem;	
+	margin-top: -.15rem;
+	margin-bottom: .15rem;	
 	transition: 300ms;
+	background-color: #02a577;
 	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
-.portfolio h3 {
+.portfolio h4 {
 	color: var(--font);
 	font-weight: 600;
+	padding-bottom: .75rem;
 }
 
 .portfolio small {
+	font-size: .75rem;
 	color: var(--font);
 }
 
 .portfolio div {
 	width: 90%;
-	height: 200px;
+	height: 150px;
 	margin: 0 auto;
 	margin-bottom: .85rem;
 	background-repeat: no-repeat;
@@ -541,11 +544,83 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
 	img {
 		margin: 0;
 	}
-	
+
+	.hero {
+		justify-content: center;
+		text-align: center;
+		padding-top: 1rem;
+	}
+
+	.hero img {
+		background: var(--bg-accent);
+		height: 200px;
+		width: 200px;
+		border-radius: 100%;
+		margin: auto;
+	}	
+
+	#hero {
+		margin: 0;
+	}
+
+	.portfolio-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+		margin: auto;
+	}
+
+	.services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.skill {
+		display: grid;
+		justify-content: center;
+	}
+
+	.skill p {
+		margin-bottom: 1.5rem;
+	}
+
+	.brands {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		place-items: center;
+	}
+
+	.brands span {
+		color: var(--font);
+		display: inline-block;
+		font-size: 4rem;
+		margin-top: 1rem;
+	}
+
+	.footer-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	footer {
+		text-align: center;
+	}
+
+	.socials {
+		margin: auto;
+	}
+
+	.links li a {
+		justify-content: center;
+	}
+
+	.copyright {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 768px) {	
 	.header {
         justify-content: space-between;
         padding: 1rem;
@@ -623,79 +698,9 @@ footer {
 		color: var(--primary);
 		transition: 300ms;
 	}
-
-	.hero {
-		justify-content: center;
-		text-align: center;
-		padding-top: 1rem;
-	}
-
-	.hero img {
-		background: var(--bg-accent);
-		height: 200px;
-		width: 200px;
-		border-radius: 100%;
-		margin: auto;
-	}	
-
-	#hero {
-		margin: 0;
-	}
-
-	.portfolio-wrapper {
-		grid-template-columns: repeat(1, 1fr);
-		width: 75%;
-		margin: auto;
-	}
-
-	.services-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.skill {
-		display: grid;
-		justify-content: center;
-	}
-
-	.skill p {
-		margin-bottom: 1.5rem;
-	}
-
-	.brands {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		place-items: center;
-	}
-
-	.brands span {
-		color: var(--font);
-		display: inline-block;
-		font-size: 4rem;
-		margin-top: 1rem;
-	}
-
-	.footer-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	footer {
-		text-align: center;
-	}
-
-	.socials {
-		margin: auto;
-	}
-
-	.links li a {
-		justify-content: center;
-	}
-
-	.copyright {
-		text-align: center;
-	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 	.header__logo {
         margin-left: .25rem;
     }
