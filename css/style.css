@@ -199,7 +199,8 @@ section {
 
 .section-title {
 	text-align: center;
-	margin: 3rem 0;
+	width: 75%;
+	margin: 3rem auto;
 }
 
 .section-title h1 {
@@ -564,6 +565,10 @@ footer {
 	.wrapper {
 		width: 90%;
 	}
+
+	.section-title {
+		width: auto;
+	}
 }
 
 @media only screen and (max-width: 900px) {
@@ -690,8 +695,8 @@ footer {
     .nav__list {
         position: fixed;
 		top: 0;
-		left: -300px;
-		width: 300px;
+		left: -80%;
+		width: 80%;
 		height: 100%;
 		background-color: var(--bg);
 		transition: .3s;
@@ -733,7 +738,9 @@ footer {
     }
 	
 	.active__item {
+		margin-top: .5rem;
 		margin-left: 1.5rem;
+		margin-bottom: .5rem;
 	}
 
     .social__media {
