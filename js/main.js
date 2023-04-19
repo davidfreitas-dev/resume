@@ -32,10 +32,10 @@ menuToggle.addEventListener('touchstart', toggleMenu)
 /** 
  * Theme Toggle
  */
-const btnTheme = document.querySelector('.btn__theme')
+const btnTheme = document.querySelector('.btn__toggle__theme')
 
 function toggleTheme(e) {
-    const btnIcon = document.querySelector('.btn__theme i')
+    const btnIcon = document.querySelector('.btn__toggle__theme span')
     const themeIcon = btnIcon.classList.item(1)
 
     if (themeIcon === 'la-sun') {
@@ -50,3 +50,13 @@ function toggleTheme(e) {
 }
 
 btnTheme.addEventListener('click', toggleTheme)
+
+// $('.nav a[href^="#"]').on('click', function(e) {
+//     e.preventDefault();
+//     var id = $(this).attr('href'),
+//     targetOffset = $(id).offset().top;
+    
+//     $('html, body').animate({ 
+//         scrollTop: targetOffset - 50
+//     }, 500);
+// });

@@ -25,7 +25,6 @@
 			</span>
 			<ul class="nav__list" role="menu">
 				<h3>Dave<small> dev</small></h3>
-				<li class="nav__item"><span class="btn__theme"><i class="las la-sun"></i></span></li>
 				<li class="nav__item"><a href="#hero" class="nav__link"><i class="las la-home"></i>Início</a></li>
 				<li class="nav__item"><a href="#presentation" class="nav__link"><i class="las la-info-circle"></i>Sobre</a></li>
 				<li class="nav__item"><a href="#portfolio" class="nav__link"><i class="las la-briefcase"></i>Portfolio</a></li>
@@ -327,7 +326,9 @@
 		</div>
 		-->
 		<div class="nav">
-			<a href="#hero" class="btn-scroll-top"><span class="las la-chevron-up"></span></a>
+			<div class="btn__toggle__theme">
+				<span class="las la-sun"></span>
+			</div>
 		</div>	
 		
 		<footer>
@@ -421,18 +422,6 @@
 
 	<script>
 		new WOW().init();
-	</script>
-	
-	<script type="text/javascript">
-		$('.nav a[href^="#"]').on('click', function(e) {
-			e.preventDefault();
-			var id = $(this).attr('href'),
-			targetOffset = $(id).offset().top;
-			
-			$('html, body').animate({ 
-				scrollTop: targetOffset - 50
-			}, 500);
-		});
 	</script>
 </body>
 </html>

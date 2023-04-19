@@ -116,17 +116,6 @@ header h3 small {
 	color: var(--primary);
 }
 
-.btn__theme{
-    color: var(--font);
-	font-size: 1.5rem;
-	padding: 0 1.25rem;
-}
-
-.btn__theme :hover {
-	color: var(--primary);
-	transition: 300ms;
-}
-
 .active__item {
     color: var(--font);
     font-weight: bold;
@@ -447,17 +436,18 @@ textarea {
 	display: none;
 }
 
-.btn-scroll-top {
-	color: var(--bg);
-	background-color: var(--primary);
+.btn__toggle__theme {
 	position: fixed;
 	right: 20px;
+	bottom: 30px;
 	height: 40px;
 	width: 40px;
-	border-radius: 100%;	
-	bottom: 30px;
+	font-size: 1.5rem;
 	display: grid;
 	place-items: center;
+	color: var(--bg);
+	background-color: var(--primary);
+	border-radius: 100%;	
 	z-index: 20;
 }
 
