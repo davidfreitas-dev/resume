@@ -447,7 +447,8 @@ textarea {
 	place-items: center;
 	color: var(--bg);
 	background-color: var(--primary);
-	border-radius: 100%;	
+	border-radius: 100%;
+	cursor: pointer;	
 	z-index: 20;
 }
 
