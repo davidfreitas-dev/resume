@@ -429,7 +429,9 @@ section {
 	color: #fff;
 	background: var(--primary);
 	border: 1px solid var(--primary);
-	padding: .5rem 2.5rem;
+	letter-spacing: 0.5px;
+	height: 42px;
+	padding: 0 2.5rem;
 	cursor: pointer;
 	transition: .2s ease-in;
 }
