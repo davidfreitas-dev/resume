@@ -386,7 +386,7 @@ section {
 }
 
 .form-title h2 {
-	color: #fff;
+	color: var(--font);
 	font-size: 2.8rem;
 }
 
@@ -426,7 +426,7 @@ section {
 
 .form-group #btn-send {
 	font-weight: 700;
-	color: var(--font);
+	color: #fff;
 	background: var(--primary);
 	border: 1px solid var(--primary);
 	padding: .5rem 2.5rem;
@@ -802,6 +802,10 @@ footer {
 	.skills-wrapper {
 		grid-template-columns: repeat(2, 1fr);
 		margin-bottom: 0;
+	}
+
+	.form-group #btn-send {
+		width: 100%;
 	}
 
 	.footer-grid {
