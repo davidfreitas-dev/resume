@@ -431,6 +431,7 @@ section {
 	border: 1px solid var(--primary);
 	padding: .5rem 2.5rem;
 	cursor: pointer;
+	transition: .2s ease-in;
 }
 
 textarea {
@@ -451,13 +452,13 @@ textarea {
 
 .success {
 	color: var(--primary);
-	background-color: #93e8cf;
+	background-color: #9fead3;
 	border-radius: 3px;
 }
 
 .error {
 	color: #e45548;
-	background-color: #edb1ab;
+	background-color: #eeb6b1;
 	border-radius: 3px;
 }
 
