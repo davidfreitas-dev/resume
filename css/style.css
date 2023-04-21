@@ -413,12 +413,24 @@ section {
 	color: var(--font);
 }
 
+.form-group input:focus, textarea:focus {
+	box-shadow: 0 0 0 0;
+    outline: 0;
+	border: 1px solid var(--primary);
+	transition: 0.1s ease-in;
+}
+
+.form-group textarea {
+	color: var(--font);
+}
+
 .form-group button {
-	padding: .5rem 2.5rem;
+	font-weight: 700;
 	color: var(--font);
 	background: var(--primary);
 	border: 1px solid var(--primary);
-	font-weight: 700;
+	padding: .5rem 2.5rem;
+	cursor: pointer;
 }
 
 textarea {
@@ -457,7 +469,7 @@ footer {
 	transition: 0.2s linear;
 	color: #fff;
 	padding: 3.7rem 0rem;
-	margin-top: 5rem;
+	margin-top: 3rem;
 }
 
 .footer-grid {

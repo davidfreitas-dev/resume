@@ -37,9 +37,7 @@ function toggleMenu(event) {
 }
 
 menuLink.addEventListener('click', toggleMenu)
-
 menuToggle.addEventListener('click', toggleMenu)
-
 menuToggle.addEventListener('touchstart', toggleMenu)
 
 /** 
@@ -63,3 +61,31 @@ function toggleTheme(e) {
 }
 
 btnTheme.addEventListener('click', toggleTheme)
+
+/** 
+ * Contact Form
+ */
+const form = document.querySelector('#form-contact');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    const formData = new FormData(form);
+    
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+    
+    const isValidEmail = validateEmail(email);
+
+    if (isValidEmail) {
+        
+    }
+});
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    return re.test(email);
+}
+  
