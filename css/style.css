@@ -5,7 +5,7 @@
 	--bg: #fff;
 	--bg-accent: #f1f1f1;
 	--shadow: #6c6c6c;
-	--font: #3c3c3c;	
+	--font: #3c3c3c;
 }
 
 .dark:root {
@@ -424,7 +424,7 @@ section {
 	color: var(--font);
 }
 
-.form-group button {
+.form-group #btn-send {
 	font-weight: 700;
 	color: var(--font);
 	background: var(--primary);
@@ -442,10 +442,23 @@ textarea {
 }
 
 .alert {
+	display: block;
 	font-size: .8rem;
+	margin: 1rem 0;
 	padding: .5rem 1rem;
-	color: var(--font);
-	display: none;
+	visibility: hidden;
+}
+
+.success {
+	color: var(--primary);
+	background-color: #93e8cf;
+	border-radius: 3px;
+}
+
+.error {
+	color: #e45548;
+	background-color: #edb1ab;
+	border-radius: 3px;
 }
 
 .btn__toggle__theme {
