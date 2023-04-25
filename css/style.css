@@ -60,32 +60,32 @@ header h3 small {
 }
 
 .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    top: 0;
-    z-index: 30;
-    background-color: var(--bg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  z-index: 30;
+  background-color: var(--bg);
 	box-shadow: 0px -5px 5px 3px #3c3c3c;
 	transition: 0.2s linear;
 }
 
 .header__logo {
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #fff;
 }
 
 .menu__toggle {
-    display: none;
+  display: none;
 }
 
 .nav__list {
-    display: flex;
-    gap: .5rem;
+  display: flex;
+  gap: .5rem;
 }
 
 .nav__list h3 {
@@ -101,15 +101,15 @@ header h3 small {
 }
 
 .nav__link {
-    display: block;
-    font-size: .85rem;
-    padding: .5rem;
-    color: var(--font);
+  display: block;
+  font-size: .85rem;
+  padding: .5rem;
+  color: var(--font);
 }
 
 .nav__link i {
 	font-size: 1rem;
-    padding-right: .5rem;
+  padding-right: .5rem;
 }
 
 .nav__link:hover {
@@ -117,12 +117,12 @@ header h3 small {
 }
 
 .active__item {
-    color: var(--font);
-    font-weight: bold;
-    padding: 0.25rem 1rem;
+  color: var(--font);
+  font-weight: bold;
+  padding: 0.25rem 1rem;
 	border: 2px solid var(--primary);
-    background: transparent;
-    border-radius: 50px;
+  background: transparent;
+  border-radius: 50px;
 	margin-top: 2px;
 }
 
@@ -133,7 +133,7 @@ header h3 small {
 }
 
 .social__media {
-    display: none;
+  display: none;
 }
 
 .wrapper {
@@ -249,8 +249,8 @@ section {
 	margin: 0 auto;
 	background-color: #fff;
 	background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+  background-position: top;
+  background-size: cover;
 }
 
 .portfolio .content {
@@ -415,7 +415,7 @@ section {
 
 .form-group input:focus, textarea:focus {
 	box-shadow: 0 0 0 0;
-    outline: 0;
+  outline: 0;
 	border: 1px solid var(--primary);
 	transition: 0.1s ease-in;
 }
@@ -476,6 +476,7 @@ textarea {
 	color: var(--bg);
 	background-color: var(--primary);
 	border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	cursor: pointer;	
 	z-index: 20;
 }
@@ -675,116 +676,116 @@ footer {
 	.header {
         justify-content: space-between;
         padding: 1rem 1.5rem;
-    }
+      }
 
-    .header__logo {
+      .header__logo {
         margin-left: 1rem;
-    }
+      }
 
-    .menu__toggle {
-        display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		width: 30px;
-		height: 20px;
-        cursor: pointer;
-    }
-
-	.menu__toggle span {
-		display: block;
-		width: 100%;
-		height: 3px;
-        background: var(--primary);
-		border-radius: 10px;
-		transition: all 0.3s ease-in-out;
-	}
-
-	.menu__toggle.active span:first-child {
-		transform: rotate(45deg) translate(5px, 5px);
-	}
-	
-	.menu__toggle.active span:nth-child(2) {
-		opacity: 0;
-	}
-	
-	.menu__toggle.active span:last-child {
-		transform: rotate(-45deg) translate(7px, -7px);
-	}
-
-    .nav__list {
-        position: fixed;
-		top: 0;
-		left: -80%;
-		width: 80%;
-		height: 100%;
-		background-color: var(--bg);
-		transition: .3s;
-        z-index: 100;
-        visibility: hidden;
-        overflow-y: hidden;
-
+      .menu__toggle {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-		gap: .25rem;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+    .menu__toggle span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
     }
 
-	.nav__list h3 {
-		display: block;
-	}
+    .menu__toggle.active span:first-child {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu__toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .menu__toggle.active span:last-child {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
 
-	.la-moon {		
-		color: var(--font);
-	}
+    .nav__list {
+      position: fixed;
+      top: 0;
+      left: -80%;
+      width: 80%;
+      height: 100%;
+      background-color: var(--bg);
+      transition: .3s;
+      z-index: 100;
+      visibility: hidden;
+      overflow-y: hidden;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .25rem;
+    }
+
+    .nav__list h3 {
+      display: block;
+    }
+
+    .la-moon {		
+      color: var(--font);
+    }
 
     .active .nav__list {
-		left: 0;
-        height: 100vh;
-        visibility: visible;
-        overflow-y: auto;
-        background-color: var(--bg);
-		box-shadow: 0px 3px 3px -1px #3c3c3c;
-		transition: .2s linear;
+      left: 0;
+      height: 100vh;
+      visibility: visible;
+      overflow-y: auto;
+      background-color: var(--bg);
+      box-shadow: 0px 3px 3px -1px #3c3c3c;
+      transition: .2s linear;
     }
 
     .nav__item {
-        padding: .3rem 0;
+      padding: .3rem 0;
     }
 
     .nav__link {
-        font-size: 1.1rem;
-        padding: .5rem 1.5rem;
+      font-size: 1.1rem;
+      padding: .5rem 1.5rem;
     }
 	
-	.active__item {
-		margin-top: .5rem;
-		margin-left: 1.5rem;
-		margin-bottom: .5rem;
-	}
+    .active__item {
+      margin-top: .5rem;
+      margin-left: 1.5rem;
+      margin-bottom: .5rem;
+    }
 
     .social__media {
-        display: block;
-        margin-top: 1rem;
-        margin-left: .5rem;
+      display: block;
+      margin-top: 1rem;
+      margin-left: .5rem;
     }
 
     .social__link {
-        font-size: 1.8rem;
-		color: var(--font);
-        padding: 1rem;
-        cursor: pointer;
+      font-size: 1.8rem;
+		  color: var(--font);
+      padding: 1rem;
+      cursor: pointer;
     }
 
-	.social__link :hover {
-		color: var(--primary);
-		transition: 300ms;
-	}
+    .social__link :hover {
+      color: var(--primary);
+      transition: 300ms;
+    }
 }
 
 @media only screen and (max-width: 600px) {
 	.header__logo {
-        margin-left: .25rem;
-    }
+    margin-left: .25rem;
+  }
 
 	.portfolio-wrapper {
 		grid-template-columns: repeat(1, 1fr);
