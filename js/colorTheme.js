@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
+$(document).ready(function() {
   const currentTheme = localStorage.getItem('theme');
   
   if (!currentTheme) {
       applySystemColorScheme();
   } else {
-      document.documentElement.setAttribute('data-theme', currentTheme);
+      $('html').attr('data-theme', currentTheme);
       changeBtnIcon(currentTheme);
   }
   
@@ -12,43 +12,41 @@ document.addEventListener("DOMContentLoaded", function() {
       const colorScheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
       if (colorScheme === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'dark');
+          $('html').attr('data-theme', 'dark');
       } else {
-          document.documentElement.setAttribute('data-theme', 'light');
+          $('html').attr('data-theme', 'light');
       }
 
       changeBtnIcon(colorScheme);
   }
 
   function changeBtnIcon(theme) {
-      const btnIcon = document.querySelector('.btn__toggle__theme span');
+      const btnIcon = $('.btn__toggle__theme span');
       
       if (theme === 'dark') {
-          btnIcon.classList.remove('la-moon');
-          btnIcon.classList.add('la-sun');
+          btnIcon.removeClass('la-moon').addClass('la-sun');
       } else {
-          btnIcon.classList.remove('la-sun');
-          btnIcon.classList.add('la-moon');
+          btnIcon.removeClass('la-sun').addClass('la-moon');
       }
   }
 
-  const themeToggleBtn = document.querySelector('.btn__toggle__theme');
+  const themeToggleBtn = $('.btn__toggle__theme');
 
   function toggleTheme() {
       const currentTheme = localStorage.getItem('theme');
 
       if (currentTheme === 'light') {
-          document.documentElement.setAttribute('data-theme', 'dark');
+          $('html').attr('data-theme', 'dark');
           localStorage.setItem('theme', 'dark');
           changeBtnIcon('dark');
       } else {
-          document.documentElement.setAttribute('data-theme', 'light');
+          $('html').attr('data-theme', 'light');
           localStorage.setItem('theme', 'light');
           changeBtnIcon('light');
       }      
   }
 
-  themeToggleBtn.addEventListener('click', toggleTheme);
+  themeToggleBtn.on('click', toggleTheme);
   
   // window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemColorScheme);
 });
