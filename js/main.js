@@ -48,28 +48,6 @@ menuToggle.addEventListener('click', toggleMenu)
 menuToggle.addEventListener('touchstart', toggleMenu)
 
 /** 
- * Theme Toggle
- */
-const btnTheme = document.querySelector('.btn__toggle__theme')
-
-function toggleTheme(e) {
-    const btnIcon = document.querySelector('.btn__toggle__theme span')
-    const themeIcon = btnIcon.classList.item(1)
-
-    if (themeIcon === 'la-sun') {
-        btnIcon.classList.remove('la-sun')
-        btnIcon.classList.add('la-moon')
-    } else {
-        btnIcon.classList.remove('la-moon')
-        btnIcon.classList.add('la-sun')
-    }
-
-    return document.documentElement.classList.toggle('dark')
-}
-
-btnTheme.addEventListener('click', toggleTheme)
-
-/** 
  * Contact Form
  */
 const form = document.querySelector('#form-contact');
