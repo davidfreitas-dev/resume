@@ -444,24 +444,34 @@ textarea {
 	padding: .5rem 1rem;
 }
 
-.alert {
-	display: block;
-	font-size: .8rem;
-	margin: 1rem 0;
-	padding: .5rem 1rem;
-	visibility: hidden;
+.toast__container {
+  position: fixed;
+  width: 35%;
+  top: 10%;
+  right: 20px; /* Ajuste conforme necessário */
+  z-index: 1000;
 }
 
-.success {
-	color: var(--primary);
-	background-color: #9fead3;
-	border-radius: 3px;
+.toast {
+  display: block;
+  color: #fff;
+  font-size: .85rem;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
 }
 
-.error {
-	color: #ed5041;
-	background-color: #f9d6d2;
-	border-radius: 3px;
+.toast.show {
+  opacity: 1 !important;
+}
+
+.toast.success {
+	background-color: #49C077;
+}
+
+.toast.error {
+	background-color: #EB6159;
 }
 
 .btn__toggle__theme {
@@ -673,23 +683,23 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {	
-	.header {
-        justify-content: space-between;
-        padding: 1rem 1.5rem;
-      }
+	  .header {
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+    }
 
-      .header__logo {
-        margin-left: 1rem;
-      }
+    .header__logo {
+      margin-left: 1rem;
+    }
 
-      .menu__toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-      }
+    .menu__toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
 
     .menu__toggle span {
       display: block;
@@ -779,6 +789,17 @@ footer {
     .social__link :hover {
       color: var(--primary);
       transition: 300ms;
+    }
+
+    .toast__container {
+      top: 15%;
+      right: 50%;
+      width: 80%;
+      transform: translateX(50%);
+    }
+
+    .toast {
+      padding: 20px;
     }
 }
 

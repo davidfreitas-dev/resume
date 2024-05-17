@@ -13,14 +13,14 @@ $(function() {
         const message = formData.get('message');
 
         if (!name || !email || !message) {
-            showAlertMessage('Oops! Preencha todos os campos.', 'error');
+            showToastMessage('Oops! Preencha todos os campos.', 'error');
             return;
         }
 
         const isValidEmail = validateEmail(email);
 
         if (!isValidEmail) {
-            showAlertMessage('Informe um e-mail válido.', 'error');
+            showToastMessage('Informe um e-mail válido.', 'error');
             return;
         }
 
@@ -36,15 +36,14 @@ $(function() {
         return re.test(email);
     }
 
-    function showAlertMessage(msg, status) {
-        const alert = $('#alert');
-        alert.text(msg);
-        alert.css('visibility', 'visible');
-        alert.toggleClass(status);
-
+    function showToastMessage(msg, status) {
+        const toast = $('#toast');
+        toast.text(msg);
+        toast.addClass(status);
+        toast.addClass('show');
+    
         setTimeout(function() {
-            alert.css('visibility', 'hidden');
-            alert.toggleClass(status);
+            toast.removeClass('show');
         }, 2000);
     }
 
@@ -60,9 +59,9 @@ $(function() {
 
         await emailjs.send('service_m0ovszh', 'template_ltj7azl', templateParams)
             .then(function(response) {
-                showAlertMessage(`${response.text}! Mensagem enviada com sucesso!`, 'success');
+                showToastMessage(`${response.text}! Mensagem enviada com sucesso!`, 'success');
             }, function(error) {
-                showAlertMessage(error, 'error');
+                showToastMessage(error, 'error');
             });
 
         sendButton.val('Enviar Mensagem');
