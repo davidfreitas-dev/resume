@@ -38,13 +38,16 @@ $(function() {
 
     function showToastMessage(msg, status) {
         const toast = $('#toast');
+        
         toast.text(msg);
         toast.addClass(status);
         toast.addClass('show');
     
         setTimeout(function() {
             toast.removeClass('show');
-        }, 2000);
+            toast.removeClass(status);
+            toast.text('');
+        }, 2500);
     }
 
     async function sendEmail(params) {
@@ -59,7 +62,8 @@ $(function() {
 
         await emailjs.send('service_m0ovszh', 'template_ltj7azl', templateParams)
             .then(function(response) {
-                showToastMessage(`${response.text}! Mensagem enviada com sucesso!`, 'success');
+                showToastMessage(`${response.text}! Mensagem enviada com sucesso! Assim que possível retornaremos seu contato.`, 'success');
+                form[0].reset(); // Limpa o formulário após o envio bem-sucedido
             }, function(error) {
                 showToastMessage(error, 'error');
             });
