@@ -112,7 +112,7 @@ header h3 small {
   padding-right: .5rem;
 }
 
-.nav__link:hover {
+.nav__link:hover, .nav__link.active {
 	color: var(--primary);
 }
 

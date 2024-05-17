@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   const currentTheme = localStorage.getItem('theme');
   
   if (!currentTheme) {
