@@ -2,71 +2,59 @@ $(function() {
     emailjs.init('j5lfz4mIUUaOnUcfZ');
 
     const form = $('#form-contact');
+    const toast = $('#toast');
+    const sendButton = $('#btn-send');
 
-    form.on('submit', function(event) {
+    form.on('submit', handleFormSubmit);
+
+    function handleFormSubmit(event) {
         event.preventDefault();
-
         const formData = new FormData(this);
-
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
+        const { name, email, message } = Object.fromEntries(formData.entries());
 
         if (!name || !email || !message) {
             showToastMessage('Oops! Preencha todos os campos.', 'error');
             return;
         }
 
-        const isValidEmail = validateEmail(email);
-
-        if (!isValidEmail) {
+        if (!validateEmail(email)) {
             showToastMessage('Informe um e-mail válido.', 'error');
             return;
         }
 
-        sendEmail({
-            name: name,
-            email: email,
-            message: message
-        });
-    });
+        sendEmail({ name, email, message });
+    }
 
     function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
     }
 
-    function showToastMessage(msg, status) {
-        const toast = $('#toast');
-        
-        toast.text(msg);
-        toast.addClass(status);
-        toast.addClass('show');
-    
-        setTimeout(function() {
-            toast.removeClass('show');
-            toast.removeClass(status);
-            toast.text('');
-        }, 2500);
+    function showToastMessage(message, status) {
+        const displayTime = status === 'success' ? 5000 : 3000;
+
+        toast.text(message)
+            .addClass(`${status} show`);
+
+        setTimeout(() => {
+            toast.removeClass('show')
+                .removeClass(status)
+                .text('');
+        }, displayTime);
     }
 
-    async function sendEmail(params) {
-        const sendButton = $('#btn-send');
+    async function sendEmail({ name, email, message }) {
         sendButton.val('Enviando...');
 
-        const templateParams = {
-            name: params.name,
-            email: params.email,
-            message: params.message
-        };
+        const templateParams = { name, email, message };
 
-        await emailjs.send('service_m0ovszh', 'template_ltj7azl', templateParams)
-            .then(function(response) {
-                showToastMessage(`${response.text}! Mensagem enviada com sucesso! Assim que possível retornaremos seu contato.`, 'success');
-                form[0].reset(); // Limpa o formulário após o envio bem-sucedido
-            }, function(error) {
-                showToastMessage(error, 'error');
-            });
+        try {
+            await emailjs.send('service_m0ovszh', 'template_ltj7azl', templateParams);
+            showToastMessage('Obrigado por entrar em contato conosco! Recebemos sua mensagem e responderemos o mais breve possível no e-mail que você forneceu.', 'success');
+            form[0].reset();
+        } catch (error) {
+            showToastMessage(`Erro: ${error.text || error}`, 'error');
+        }
 
         sendButton.val('Enviar Mensagem');
     }

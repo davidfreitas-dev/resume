@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     // Função para navegação suave
     function smoothScroll() {
         $('.nav a[href^="#"]').on('click', function(e) {
