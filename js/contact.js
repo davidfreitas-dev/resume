@@ -31,17 +31,15 @@ $(function() {
     }
 
     function showToastMessage(message, status) {
-        const displayTime = status === 'success' ? 5000 : 3000;
-
-        toast.text(message)
-            .addClass(`${status} show`);
-
-        setTimeout(() => {
-            toast.removeClass('show')
-                .removeClass(status)
-                .text('');
-        }, displayTime);
+      const toast = $('#toast');
+    
+      toast.text(message).addClass('show').addClass(status);
+    
+      setTimeout(() => {
+        toast.removeClass('show').removeClass(status).text('');
+      }, 5000);
     }
+    
 
     async function sendEmail({ name, email, message }) {
         sendButton.val('Enviando...');

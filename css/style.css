@@ -444,12 +444,19 @@ textarea {
 	padding: .5rem 1rem;
 }
 
-.toast__container {
+#toast {
   position: fixed;
-  width: 35%;
   top: 10%;
-  right: 20px; /* Ajuste conforme necessário */
+  right: 20px;
+  width: 35%;
   z-index: 1000;
+  visibility: hidden; /* Oculta inicialmente */
+  opacity: 0; /* Opacidade inicial */
+}
+
+#toast.show {
+  visibility: visible; /* Torna visível quando a classe show é adicionada */
+  opacity: 1;
 }
 
 .toast {
@@ -459,7 +466,6 @@ textarea {
   padding: 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease-in-out;
-  opacity: 0;
 }
 
 .toast.show {
@@ -791,15 +797,12 @@ footer {
       transition: 300ms;
     }
 
-    .toast__container {
-      top: 15%;
-      right: 50%;
-      width: 80%;
-      transform: translateX(50%);
-    }
-
-    .toast {
+    #toast {
+      top: 17%;
+      left: 50%; /* Centraliza horizontalmente */
+      width: 90%;
       padding: 20px;
+      transform: translate(-50%, -50%); /* Centraliza completamente */
     }
 }
 
