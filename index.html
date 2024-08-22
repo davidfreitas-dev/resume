@@ -9,7 +9,7 @@
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/timeline.css">
 	<link rel="stylesheet" href="css/animate.min.css">
@@ -159,37 +159,46 @@
 		</div>
 
 		<div class="wrapper">
-			<section id="portfolio">
-				<div class="section-title wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<h1>Portfolio</h1>
-					<small>Estes são alguns projetos e soluções criados por mim, sempre buscando atender a um padrão de desenvolvimento e o uso de tecnologias atuais</small>
-				</div>
-
-				<div class="portfolio-wrapper">
-					<div class="portfolio wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-						<div class="cover" style="background-image: url(img/small-notes.png);"></div>
-						<div class="content">
-							<h3>Small Notes</h3>
-							<small>App de notas rápidas para manter os lembretes e anotações sempre à mão.</small>
-							<a href="https://davidfreitas-dev.github.io/small-notes/" target="_blank">
-								Ver mais <i class="las la-long-arrow-alt-right"></i>
-							</a>
-						</div>
-					</div>
-
-          <div class="portfolio wow fadeInDown" data-wow-duration="1500ms" data-wow-delay="600ms">
-						<div class="cover" style="background-image: url(img/cardapio-digital.png);"></div>
-						<div class="content">
-							<h3>Cardápio Digital</h3>
-							<small>App de cardápio para ver todos os produtos e ainda simular um pedido.</small>
-							<a href="https://cardapio-digital-46e9a.web.app/" target="_blank">
-								Ver mais <i class="las la-long-arrow-alt-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
+      <section id="portfolio">
+        <div class="section-title wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <h1>Portfolio</h1>
+          <small>Estes são alguns projetos e soluções criados por mim, sempre buscando atender a um padrão de desenvolvimento e o uso de tecnologias atuais</small>
+        </div>
+    
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide portfolio wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="cover" style="background-image: url(img/small-notes.png);"></div>
+              <div class="content">
+                <h3>Small Notes</h3>
+                <small>App de notas rápidas para manter os lembretes e anotações sempre à mão.</small>
+                <a href="https://davidfreitas-dev.github.io/small-notes/" target="_blank">
+                  Ver mais <i class="las la-long-arrow-alt-right"></i>
+                </a>
+              </div>
+            </div>
+    
+            <div class="swiper-slide portfolio wow fadeInDown" data-wow-duration="1500ms" data-wow-delay="600ms">
+              <div class="cover" style="background-image: url(img/cardapio-digital.png);"></div>
+              <div class="content">
+                <h3>Cardápio Digital</h3>
+                <small>App de cardápio para ver todos os produtos e ainda simular um pedido.</small>
+                <a href="https://cardapio-digital-46e9a.web.app/" target="_blank">
+                  Ver mais <i class="las la-long-arrow-alt-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+    
+          <!-- Swiper Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+    </div>    
 
 		<div class="wrapper">
 			<section id="skills">
@@ -403,7 +412,8 @@
 	</main>
 
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-	<script type="module" src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script type="module" src="js/main.js"></script>
 	<script src="js/wow.min.js"></script>
 
 	<script>

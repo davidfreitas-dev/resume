@@ -227,13 +227,6 @@ section {
 	color: var(--primary);
 }
 
-.portfolio-wrapper {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 1rem;
-	margin-bottom: 5rem;
-}
-
 .portfolio {
 	position: relative;
 	text-align: left;
@@ -274,6 +267,44 @@ section {
 	font-size: .85rem;
 	padding-top: .5rem;
 	color: var(--primary);
+}
+
+.swiper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .85rem;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: .85rem; /* Tamanho do ícone do botão */
+}
+
+.swiper-button-next {
+  right: 10px; /* Distância da borda direita */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Distância da borda esquerda */
+}
+
+.swiper-pagination-bullet {
+  background: var(--primary);
 }
 
 .skills-wrapper {
@@ -630,12 +661,6 @@ footer {
 		margin: 0;
 	}
 
-	.portfolio-wrapper {
-		grid-template-columns: repeat(2, 1fr);
-		width: 100%;
-		margin: auto;
-	}
-
 	.services-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -810,12 +835,6 @@ footer {
 	.header__logo {
     margin-left: .25rem;
   }
-
-	.portfolio-wrapper {
-		grid-template-columns: repeat(1, 1fr);
-		width: 100%;
-		margin: 0;
-	}
 	
 	.services-grid {
 		grid-template-columns: 100%;

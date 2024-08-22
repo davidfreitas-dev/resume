@@ -2,7 +2,6 @@ $(function() {
     emailjs.init('j5lfz4mIUUaOnUcfZ');
 
     const form = $('#form-contact');
-    const toast = $('#toast');
     const sendButton = $('#btn-send');
 
     form.on('submit', handleFormSubmit);
@@ -36,7 +35,7 @@ $(function() {
       toast.text(message).addClass('show').addClass(status);
     
       setTimeout(() => {
-        toast.removeClass('show').removeClass(status).text('');
+          toast.removeClass('show').removeClass(status).text('');
       }, 5000);
     }
     
